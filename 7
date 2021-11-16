@@ -1,0 +1,21 @@
+#!/bin/bash 
+echo " Enter the number "
+read n
+echo " Enter digits of number (size) "
+read s
+sum=0
+rev=0
+while [ $n -gt 0 ]
+do
+sd=$(($n % 10))
+rev='expr $rev \* 10 + $sd'
+n=$((n / 10))
+sum=$((sum +$sd))
+avg=$(($sum /$s))
+done
+echo "reverse number of entered digit is $rev"
+echo "the sum of the digit is $sum"
+echo "the average of the digit is $avg"
+
+
+
